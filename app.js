@@ -3,7 +3,21 @@ const path = require("path");
 
 const app = express();
 
-app.get("/", (req, res) => res.sendFile(path.join(process.cwd(), "index.html")));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "index.html"));
+});
+
+app.get("/quote02", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "quote02.html"));
+});
+
+app.get("/quote03", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "quote03.html"));
+});
+
+app.get("/quote04", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "quote04.html"));
+});
 
 const PORT = 3000;
 app.listen(PORT, (error) => {
